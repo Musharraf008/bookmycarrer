@@ -1,0 +1,91 @@
+<%- include('header')%>
+
+<div class="add-user"><a href="/" class="pri-btn">All User</a></div>
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    <form action="/api/users" method="POST">
+      <div class="formbold-input-flex">
+        <div>
+          <label for="firstname" class="formbold-form-label"> Full name </label>
+          <input
+            type="text"
+            name="name"
+            id="firstname"
+            placeholder="Jane cooper"
+            class="formbold-form-input"
+          />
+        </div>
+        <div>
+          <label for="age" class="formbold-form-label"> Age </label>
+          <input
+            type="text"
+            name="age"
+            id="age"
+            placeholder="Age"
+            class="formbold-form-input"
+          />
+        </div>
+      </div>
+
+      <div class="formbold-input-flex">
+        <div>
+          <label for="email" class="formbold-form-label">E-Mail </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="jane123@mail.com"
+            class="formbold-form-input"
+          />
+        </div>
+        <div>
+          <label for="phone" class="formbold-form-label"> Phone number </label>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="91+ 1234567890"
+            class="formbold-form-input"
+          />
+        </div>
+      </div>
+
+      <div class="formbold-input-radio-wrapper">
+        <label for="jobtitle" class="formbold-form-label"> Gender </label>
+
+        <div class="formbold-radio-flex">
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                name="gender"
+                id="jobtitle"
+                value="Male"
+              />
+              Male
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                name="gender"
+                id="jobtitle"
+                value="Female"
+              />
+              Female
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <button class="formbold-btn" type="submit" id="add_user">Create User</button>
+    </form>
+  </div>
+</div>
+
+<%- include('footer')%>

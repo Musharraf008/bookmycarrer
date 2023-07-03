@@ -1,0 +1,14 @@
+<% for (let i = 0; i < users.length; i++) { %>
+
+<tr>
+    <td><%= i + 1%></td>
+    <td><%= users[i].name%></td>
+    <td><%= users[i].gender%></td>
+    <td><%= users[i].age%></td>
+    <td><%= users[i].phone%></td>
+    <td><%= users[i].email%></td>
+    <td><a href="./update-user?id=<%= users[i]._id%>" class="update-btn">Update</a></td>
+    <td><a class="delete-btn" data-id="<%= users[i]._id%>">Delete</a></td>
+</tr>
+
+<% } %>

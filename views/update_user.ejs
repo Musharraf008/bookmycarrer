@@ -1,0 +1,85 @@
+<%- include('header')%>
+
+<div class="add-user"><a href="/" class="pri-btn">All User</a></div>
+<div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      <form method="POST" id="update_user">
+          <div class="formbold-input-flex">
+            <div>
+                <input type="hidden" name="id" value="<%= user._id %>">
+                <label for="firstname" class="formbold-form-label"> Full name </label>
+                <input
+                type="text"
+                name="name"
+                id="firstname"
+                placeholder="Jane cooper"
+                class="formbold-form-input"
+                value="<%= user.name%>"
+                />
+            </div>
+            <div>
+                <label for="lastname" class="formbold-form-label"> Age </label>
+                <input
+                type="text"
+                name="age"
+                id="lastname"
+                placeholder="Age"
+                class="formbold-form-input"
+                value="<%= user.age%>"
+                />
+            </div>
+          </div>
+  
+          <div class="formbold-input-flex">
+            <div>
+                <label for="email" class="formbold-form-label"> Mail </label>
+                <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="jane123@mail.com"
+                class="formbold-form-input"
+                value="<%= user.email%>"
+                />
+            </div>
+            <div>
+                <label for="phone" class="formbold-form-label"> Phone </label>
+                <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="91+ 1234567890"
+                class="formbold-form-input"
+                value="<%= user.phone%>"
+                />
+            </div>
+          </div>
+  
+          <div class="formbold-input-radio-wrapper">
+              <label for="jobtitle" class="formbold-form-label"> Gender</label>
+  
+              <div class="formbold-radio-flex">
+                <div class="formbold-radio-group">
+                  <label class="formbold-radio-label">
+                    <input class="formbold-input-radio" type="radio" name="gender" id="jobtitle" value="Male">
+                    Male
+                    <span class="formbold-radio-checkmark"></span>
+                  </label>
+                </div>
+  
+                <div class="formbold-radio-group">
+                  <label class="formbold-radio-label">
+                    <input class="formbold-input-radio" type="radio" name="gender" id="jobtitle" value="Female">
+                    Female
+                    <span class="formbold-radio-checkmark"></span>
+                  </label>
+                </div>
+          </div>      
+          <button class="formbold-btn" type="submit">
+              Update User
+          </button>
+      </form>
+    </div>
+  </div>
+
+<%- include('footer')%>
