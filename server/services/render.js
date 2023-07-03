@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 exports.homeRoute = (req, res) => {
-    axios.get('http://localhost:3000/api/users')
+    axios.get('https://bookmycarrer.onrender.com/api/users')
         .then(responsee =>{
             console.log(res.data)
             res.render('index', {users: responsee.data})
@@ -18,7 +18,7 @@ exports.addUser = (req, res) => {
 // }
 
 exports.updateUser = (req, res) =>{
-    axios.get('http://localhost:3000/api/users', { params : { id : req.query.id }})
+    axios.get('https://bookmycarrer.onrender.com/api/users', { params : { id : req.query.id }})
         .then(function(userdata){
             res.render("update_user", { user : userdata.data})
         })
